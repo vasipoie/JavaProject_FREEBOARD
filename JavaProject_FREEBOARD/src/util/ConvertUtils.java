@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.stream.Collectors;
  
 public class ConvertUtils<T> {
-    private ConvertUtils() {}
+     ConvertUtils() {}
     
     
     // Map -> VO
@@ -69,7 +69,7 @@ public class ConvertUtils<T> {
         return convertList;
     }
  
-    private static Object getDefaultValue(Class<?> type) {
+     static Object getDefaultValue(Class<?> type) {
         switch (type.getName()) {
             case "byte": case "short": case "int": return 0;
             case "long"    : return 0L;

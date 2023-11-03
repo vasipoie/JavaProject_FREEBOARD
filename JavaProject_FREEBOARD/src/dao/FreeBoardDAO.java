@@ -11,8 +11,8 @@ import vo.FreeBoard;
 // 데이터베이스로 쿼리를 날려서 결과를 얻는다.
 public class FreeBoardDAO {
 	// 싱글톤 패턴을 만든다.
-	private static FreeBoardDAO instance = null;
-	private FreeBoardDAO() {}
+	 static FreeBoardDAO instance = null;
+	 FreeBoardDAO() {}
 	public static FreeBoardDAO getInstance() {
 		if(instance == null) 
 			instance = new FreeBoardDAO();

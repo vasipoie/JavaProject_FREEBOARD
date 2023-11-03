@@ -11,7 +11,7 @@ public class ScanUtil {
 		return nextLine();
 	}
 	
-	private static String nextLine() {
+	 static String nextLine() {
 		return sc.nextLine();
 	}
 	
@@ -20,7 +20,7 @@ public class ScanUtil {
 		return nextInt();
 	}
 	
-	private static int nextInt() {
+	 static int nextInt() {
 		while(true) {
 			try {
 				int result = Integer.parseInt(sc.nextLine());

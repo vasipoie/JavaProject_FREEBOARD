@@ -23,7 +23,7 @@ public class Controller extends Print {
 		new Controller().start();
 	}
 
-	private void start() {
+	 void start() {
 		View view = View.HOME;
 		while (true) {
 			switch (view) {
@@ -50,7 +50,7 @@ public class Controller extends Print {
 	}
 	
 	//게시판 수정 BOARD_UPDATE
-	private View boardUpdate() {
+	 View boardUpdate() {
 		int board_no = (int) sessionStorage.get("board_no");
 		String name = ScanUtil.nextLine("이름");
 		String writer = ScanUtil.nextLine("작성자");
@@ -68,7 +68,7 @@ public class Controller extends Print {
 	}
 
 	//게시판 삭제 BOARD_DELETE
-	private View boardDelete() {
+	 View boardDelete() {
 		int board_no = (int) sessionStorage.get("board_no");
 		String del = ScanUtil.nextLine(board_no+". 게시글을 정말 삭제하시겠습니까?(y/n)");
 		if(del.equals("y")) {
@@ -79,7 +79,7 @@ public class Controller extends Print {
 	}
 
 	//게시판 신규 등록 BOARD_INSERT
-	private View boardInsert() {
+	 View boardInsert() {
 		/* 게시번호 	제목	작성자	작성시간	내용(10자만 출력)
 		 * 3		게시글3		테스트1	2023-11-01	오늘 날씨는 ....
 		 * 2		게시글2		테스트1 2023-11-01	오늘 날씨는 ....
@@ -105,7 +105,7 @@ public class Controller extends Print {
 	}
 
 	//상세페이지 조회 BOARD_DETAIL
-	private View boardView() {
+	 View boardView() {
 		int board_no = ScanUtil.nextInt("게시판을 선택하세요.");
 		/*
 		 * 세션스토리지에 선택한 게시판 번호를 넣음
@@ -126,7 +126,7 @@ public class Controller extends Print {
 	}
 
 	//전체게시판 조회 BOARD_LIST
-	private View boardList() {
+	 View boardList() {
 		List<FreeBoard> list = boardService.boardList();
 		printList(list);
 		System.out.println("----------------------------------");
@@ -143,7 +143,7 @@ public class Controller extends Print {
 	}
 
 	//전체게시판 조회, 게시판 신규 등록 메뉴 보임
-	private View home() {
+	 View home() {
 		printHome();
 		int select = ScanUtil.nextInt("메뉴를 선택하세요.");
 		switch (select) {

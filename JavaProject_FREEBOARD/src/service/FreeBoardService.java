@@ -7,8 +7,8 @@ import vo.FreeBoard;
 
 public class FreeBoardService {
 	// 싱글톤 패턴을 만든다.
-	private static FreeBoardService instance = null;
-	private FreeBoardService() {}
+	 static FreeBoardService instance = null;
+	 FreeBoardService() {}
 	public static FreeBoardService getInstance() {
 		if(instance == null) 
 			instance = new FreeBoardService();
